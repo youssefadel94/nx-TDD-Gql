@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@yadel/rockets/list/feature": ["libs/rockets/list/feature/src/index.ts"],
+      "@yadel/rockets/shell/feature": [
+        "libs/rockets/shell/feature/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

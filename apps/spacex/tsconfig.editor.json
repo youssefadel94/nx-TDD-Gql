@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "../../libs/rockets/shell/feature/src/lib/app-routing.module.ts"],
   "compilerOptions": {
     "types": ["jest", "node"]
   }

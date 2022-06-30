@@ -2,6 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "rockets-list-feature": "libs/rockets/list/feature",
+    "rockets-shell-feature": "libs/rockets/shell/feature",
     "spacex": "apps/spacex",
     "spacex-e2e": "apps/spacex-e2e"
   }

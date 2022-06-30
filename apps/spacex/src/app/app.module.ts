@@ -1,13 +1,15 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
+
+
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { RocketsShellModule } from '@yadel/rockets/shell/feature';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule],
-  providers: [],
+  declarations: [AppComponent,],
+  imports: [RouterModule, RocketsShellModule],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

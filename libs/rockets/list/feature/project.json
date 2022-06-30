@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/rockets/list/feature/src",
+  "prefix": "yadel",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/rockets/list/feature"],
+      "options": {
+        "jestConfig": "libs/rockets/list/feature/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/rockets/list/feature/**/*.ts",
+          "libs/rockets/list/feature/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

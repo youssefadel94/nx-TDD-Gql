@@ -1,4 +1,8 @@
+tdd graphql lib archtiecture solid
 
+Run nx run <project>:compodoc --serve and go to http://localhost:8080/
+
+nx run project-name:storybook
 
 # Yadel
 
