@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RocketsShellRoutingModule } from './rockets-shell-routing.module';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -12,7 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     RocketsShellRoutingModule,
     GraphQLModule,
-    HttpClientModule],
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
 
 })
 export class RocketsShellModule {}

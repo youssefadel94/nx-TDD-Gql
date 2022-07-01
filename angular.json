@@ -2,7 +2,137 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "rockets-detail-data-access": {
+      "projectType": "library",
+      "root": "libs/rockets/detail/data-access",
+      "sourceRoot": "libs/rockets/detail/data-access/src",
+      "prefix": "yadel",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rockets/detail/data-access"],
+          "options": {
+            "jestConfig": "libs/rockets/detail/data-access/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/rockets/detail/data-access/**/*.ts",
+              "libs/rockets/detail/data-access/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "rockets-detail-feature": {
+      "projectType": "library",
+      "root": "libs/rockets/detail/feature",
+      "sourceRoot": "libs/rockets/detail/feature/src",
+      "prefix": "yadel",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rockets/detail/feature"],
+          "options": {
+            "jestConfig": "libs/rockets/detail/feature/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/rockets/detail/feature/**/*.ts",
+              "libs/rockets/detail/feature/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "rockets-list-data-access": {
+      "projectType": "library",
+      "root": "libs/rockets/list/data-access",
+      "sourceRoot": "libs/rockets/list/data-access/src",
+      "prefix": "yadel",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rockets/list/data-access"],
+          "options": {
+            "jestConfig": "libs/rockets/list/data-access/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/rockets/list/data-access/**/*.ts",
+              "libs/rockets/list/data-access/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "rockets-list-feature": "libs/rockets/list/feature",
+    "rockets-list-ui-slider": {
+      "projectType": "library",
+      "root": "libs/rockets/list/ui/slider",
+      "sourceRoot": "libs/rockets/list/ui/slider/src",
+      "prefix": "yadel",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rockets/list/ui/slider"],
+          "options": {
+            "jestConfig": "libs/rockets/list/ui/slider/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/rockets/list/ui/slider/**/*.ts",
+              "libs/rockets/list/ui/slider/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "rockets-shared-ui-card": {
+      "projectType": "library",
+      "root": "libs/rockets/shared/ui/card",
+      "sourceRoot": "libs/rockets/shared/ui/card/src",
+      "prefix": "yadel",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rockets/shared/ui/card"],
+          "options": {
+            "jestConfig": "libs/rockets/shared/ui/card/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/rockets/shared/ui/card/**/*.ts",
+              "libs/rockets/shared/ui/card/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "rockets-shell-feature": "libs/rockets/shell/feature",
     "spacex": "apps/spacex",
     "spacex-e2e": "apps/spacex-e2e"
