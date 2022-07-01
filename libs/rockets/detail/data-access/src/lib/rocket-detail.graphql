@@ -1,0 +1,17 @@
+query rocketsList($id: string!) {
+  rockets(id: $id) {
+    name
+    wikipedia
+    mass {
+      kg
+    }
+    height {
+      meters
+    }
+    description
+    country
+    company
+    active
+    boosters
+  }
+}

@@ -1,1 +1,1 @@
-export * from './lib/data-access.module';
+export * from './lib/rockeet-list-data-access.module';

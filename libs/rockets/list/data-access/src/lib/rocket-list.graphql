@@ -1,0 +1,18 @@
+query rocketsList($limit: int!) {
+  rockets(limit: $limit) {
+    id
+    name
+    # wikipedia
+    # mass {
+    #   kg
+    # }
+    # height {
+    #   meters
+    # }
+    description
+    # country
+    # company
+    # active
+    # boosters
+  }
+}

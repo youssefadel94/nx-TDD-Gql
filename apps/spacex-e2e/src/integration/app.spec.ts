@@ -29,7 +29,7 @@ describe('spacex', () => {
     getInput().type('1');
     getSearchButton().click();
     getRocketCards().should('have.length', 1);
-    const title = getRocketTitle().first().invoke('text').then(text => {
+    getRocketTitle().first().invoke('text').then(text => {
       getViewButton().first().click();
       cy.url().should('include', '/rocket/');
       cy.get('h1').contains(text.trim());

@@ -1,1 +1,1 @@
-export * from './lib/data-access.module';
+export * from './lib/rockt-detail-data-access.module';
