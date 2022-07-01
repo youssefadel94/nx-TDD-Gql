@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://api.spacex.land/graphql/"
+generates:
+  libs/rockets/detail/data-access/src/lib/generated/generated.ts:
+    documents: "libs/rockets/detail/data-access/src/lib/graphql/**/*.graphql"
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-apollo-angular"

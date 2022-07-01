@@ -16,6 +16,16 @@
             "passWithNoTests": true
           }
         },
+        "generate": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "npx graphql-codegen --config libs/rockets/detail/data-access/codegen.yml"
+              }
+            ]
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
@@ -66,6 +76,16 @@
           "options": {
             "jestConfig": "libs/rockets/list/data-access/jest.config.ts",
             "passWithNoTests": true
+          }
+        },
+        "generate": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "npx graphql-codegen --config libs/rockets/detail/data-access/codegen.yml"
+              }
+            ]
           }
         },
         "lint": {

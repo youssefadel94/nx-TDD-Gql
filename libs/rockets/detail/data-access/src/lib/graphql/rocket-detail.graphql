@@ -1,5 +1,5 @@
-query rocketsList($id: string!) {
-  rockets(id: $id) {
+query rocketDetail($id: ID!) {
+  rocket(id: $id) {
     name
     wikipedia
     mass {
