@@ -1,5 +1,7 @@
 tdd graphql lib archtiecture solid  
 
+# projects dependency graph
+nx dep-graph
 # compodoc
 nx g @twittwer/compodoc:config <project>
 # adds a `compodoc` target to the specified project
