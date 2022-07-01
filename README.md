@@ -1,12 +1,22 @@
-tdd graphql lib archtiecture solid
+tdd graphql lib archtiecture solid  
 
+# compodoc
+nx g @twittwer/compodoc:config <project>
+# adds a `compodoc` target to the specified project
+# ensures `@compodoc/compodoc` as devDependencies
 Run nx run <project>:compodoc --serve and go to http://localhost:8080/
 
+# storybook
+nx g @nrwl/angular:storybook-configuration project-name
 nx run project-name:storybook
 
 # Yadel
 
 This project was generated using [Nx](https://nx.dev).
+
+Angular CLI: 14.3.6
+Node: 14.17.6
+Package Manager: npm 6.14.15
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 

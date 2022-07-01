@@ -1,9 +1,0 @@
-{
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "emitDecoratorMetadata": true
-  },
-
-  "exclude": ["../**/*.spec.ts"],
-  "include": ["../src/**/*", "*.js", "../../../libs/rockets/shell/feature/src/lib/app-routing.module.ts"]
-}
