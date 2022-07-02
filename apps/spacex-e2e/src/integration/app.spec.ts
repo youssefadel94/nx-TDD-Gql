@@ -15,6 +15,10 @@ describe('spacex', () => {
   })
   it('can input limit and see no more than limit', () => {
     getInput().type('4');
+    // TODO: change input to mat slider and update tests
+    // cy.findByLabelText("Some slider")
+    //   .focus()
+    //   .type("{rightarrow}{rightarrow}{rightarrow}");
     getSearchButton().click();
     getRocketCards().should('be.lte', 4);
   })

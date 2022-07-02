@@ -1,1 +1,7 @@
-<yadel-slider></yadel-slider>
+<h1>Enter number of rockets to display</h1>
+<yadel-slider (valueChanged)="sliderValueChanged($event)"></yadel-slider>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let rocket of rockets$ | async">
+    <yadel-rocket-card [rocketList]="rocket" (viewDetails)="viewRocketDetails($event)"></yadel-rocket-card>
+  </mat-grid-tile>
+</mat-grid-list>

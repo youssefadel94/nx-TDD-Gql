@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RocketsListGQL } from '@yadel/rockets/list/data-access';
 
 import { RocketsListComponent } from './rockets-list.component';
 

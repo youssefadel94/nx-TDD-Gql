@@ -1,1 +1,18 @@
-<p>rocket-card works!</p>
+<ng-container *ngTemplateOutlet="rocketList.id ? rocketListTemplate : rocketDetailTemplate"></ng-container>
+<ng-template #rocketListTemplate>
+  <mat-card>
+    <mat-card-title>{{rocketList.name}}</mat-card-title>
+    <mat-card-content>{{rocketList.description}}</mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openRocketDetail()">
+        <span>View</span>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+<ng-template #rocketDetailTemplate>
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-subtitle></mat-card-subtitle>
+</mat-card>
+</ng-template>

@@ -8,7 +8,10 @@ nx g @twittwer/compodoc:config <project>
 # ensures `@compodoc/compodoc` as devDependencies
 Run nx run <project>:compodoc --serve and go to http://localhost:8080/
 
-# storybook
+# storybook * for RocketCard
+nx run rockets-shared-ui-card:storybook 
+
+# add story book
 nx g @nrwl/angular:storybook-configuration project-name
 nx run project-name:storybook
 

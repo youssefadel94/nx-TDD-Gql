@@ -14,7 +14,10 @@
         "tsConfig": "apps/spacex/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/spacex/src/favicon.ico", "apps/spacex/src/assets"],
-        "styles": ["apps/spacex/src/styles.scss"],
+        "styles": [
+          "apps/spacex/src/styles.scss",
+          "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+        ],
         "scripts": []
       },
       "configurations": {

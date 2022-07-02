@@ -1351,8 +1351,8 @@ export const RocketDetailDocument = gql`
     providedIn: 'root'
   })
   export class RocketDetailGQL extends Apollo.Query<RocketDetailQuery, RocketDetailQueryVariables> {
-    document = RocketDetailDocument;
-    
+    override document = RocketDetailDocument;
+
     constructor(apollo: Apollo.Apollo) {
       super(apollo);
     }

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RocketCardComponent } from './rocket-card/rocket-card.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule],
   declarations: [
     RocketCardComponent
   ],
