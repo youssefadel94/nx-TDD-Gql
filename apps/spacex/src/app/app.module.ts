@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent,],
-  imports: [RouterModule, RocketsShellModule],
+  imports: [RocketsShellModule],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -12,6 +12,9 @@ Run nx run <project>:compodoc --serve and go to http://localhost:8080/
 nx g @nrwl/angular:storybook-configuration project-name
 nx run project-name:storybook
 
+# component generate
+ng generate @schematics/angular:component --name= --project= --export
+
 # Yadel
 
 This project was generated using [Nx](https://nx.dev).
