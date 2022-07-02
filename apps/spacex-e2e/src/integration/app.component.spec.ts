@@ -7,7 +7,7 @@ describe('spacex', () => {
   });
   beforeEach(() => cy.visit('/'))
   it('should redirect to home and render home components', () => {
-    cy.url().should('include', 'home')
+    cy.url({ timeout: 1000 }).should('include', 'home')
     cy.get('yadel-slider').should('exist');
     cy.get('yadel-rockets-list').should('exist');
   })

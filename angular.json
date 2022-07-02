@@ -17,7 +17,7 @@
           }
         },
         "generate": {
-          "builder": "@nrwl/workspace:run-commands",
+          "executor": "@nrwl/workspace:run-commands",
           "options": {
             "commands": [
               {
@@ -79,7 +79,7 @@
           }
         },
         "generate": {
-          "builder": "@nrwl/workspace:run-commands",
+          "executor": "@nrwl/workspace:run-commands",
           "options": {
             "commands": [
               {
@@ -123,9 +123,66 @@
               "libs/rockets/list/ui/slider/**/*.html"
             ]
           }
+        },
+        "storybook": {
+          "executor": "@storybook/angular:start-storybook",
+          "options": {
+            "port": 4400,
+            "configDir": "libs/rockets/list/ui/slider/.storybook",
+            "browserTarget": "rockets-list-ui-slider:build-storybook",
+            "compodoc": false
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@storybook/angular:build-storybook",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputDir": "dist/storybook/rockets-list-ui-slider",
+            "configDir": "libs/rockets/list/ui/slider/.storybook",
+            "browserTarget": "rockets-list-ui-slider:build-storybook",
+            "compodoc": false
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       },
       "tags": []
+    },
+    "rockets-list-ui-slider-e2e": {
+      "root": "apps/rockets-list-ui-slider-e2e",
+      "sourceRoot": "apps/rockets-list-ui-slider-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/rockets-list-ui-slider-e2e/cypress.json",
+            "devServerTarget": "rockets-list-ui-slider:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "rockets-list-ui-slider:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/rockets-list-ui-slider-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["rockets-list-ui-slider"]
     },
     "rockets-shared-ui-card": {
       "projectType": "library",
@@ -149,9 +206,66 @@
               "libs/rockets/shared/ui/card/**/*.html"
             ]
           }
+        },
+        "storybook": {
+          "executor": "@storybook/angular:start-storybook",
+          "options": {
+            "port": 4400,
+            "configDir": "libs/rockets/shared/ui/card/.storybook",
+            "browserTarget": "rockets-shared-ui-card:build-storybook",
+            "compodoc": false
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@storybook/angular:build-storybook",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputDir": "dist/storybook/rockets-shared-ui-card",
+            "configDir": "libs/rockets/shared/ui/card/.storybook",
+            "browserTarget": "rockets-shared-ui-card:build-storybook",
+            "compodoc": false
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       },
       "tags": []
+    },
+    "rockets-shared-ui-card-e2e": {
+      "root": "apps/rockets-shared-ui-card-e2e",
+      "sourceRoot": "apps/rockets-shared-ui-card-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/rockets-shared-ui-card-e2e/cypress.json",
+            "devServerTarget": "rockets-shared-ui-card:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "rockets-shared-ui-card:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/rockets-shared-ui-card-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["rockets-shared-ui-card"]
     },
     "rockets-shell-feature": "libs/rockets/shell/feature",
     "spacex": "apps/spacex",

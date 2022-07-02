@@ -2,9 +2,7 @@ import { getGreeting, getInput, getRocketCards, getRocketTitle, getSearchButton,
 
 describe('spacex', () => {
   beforeEach(() => cy.visit('/'));
-  it('should redirect to home', () => {
-    cy.url().should('include', 'home')
-  })
+
   // it('should display welcome message', () => {
   //   // Custom command example, see `../support/commands.ts` file
   //   cy.login('my-email@something.com', 'myPassword');
