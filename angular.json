@@ -83,7 +83,7 @@
           "options": {
             "commands": [
               {
-                "command": "npx graphql-codegen --config libs/rockets/detail/data-access/codegen.yml"
+                "command": "npx graphql-codegen --config libs/rockets/list/data-access/codegen.yml"
               }
             ]
           }

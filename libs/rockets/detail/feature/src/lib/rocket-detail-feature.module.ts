@@ -5,5 +5,6 @@ import { RocketDetailComponent } from './rocket-detail/rocket-detail.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [RocketDetailComponent],
+  exports: [RocketDetailComponent],
 })
 export class RocketDetailFeatureModule {}

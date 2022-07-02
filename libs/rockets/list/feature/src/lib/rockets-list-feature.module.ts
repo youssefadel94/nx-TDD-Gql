@@ -6,5 +6,6 @@ import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   imports: [CommonModule, MatSliderModule],
   declarations: [RocketsListComponent],
+  exports: [RocketsListComponent],
 })
 export class RocketsListFeatureModule {}
