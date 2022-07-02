@@ -1,4 +1,4 @@
-tdd graphql lib archtiecture solid  
+
 
 # projects dependency graph
 nx dep-graph
