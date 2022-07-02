@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RocketsListComponent } from './rockets-list/rockets-list.component';
-import { MatSliderModule } from '@angular/material/slider';
+import { SliderModule } from '@yadel/rockets/list/ui/slider';
 
 @NgModule({
-  imports: [CommonModule, MatSliderModule],
+  imports: [CommonModule, SliderModule],
   declarations: [RocketsListComponent],
   exports: [RocketsListComponent],
 })

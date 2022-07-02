@@ -1,13 +1,14 @@
-start the project
-think of idea & structure and tools needed (tdd graphql lib architecture solid storybook compodoc) cy (jest or karma?)
-create shell
-impalement graphQL server with nest?? N/A use spaceX open api
-write tools down and arrange them
-add tools to project
-think of structure
-implement initial structure
-implement init e2e && watch it fail
-implement graphql and rest of structure
+-start the project
+-think of idea & structure and tools needed (tdd graphql lib architecture solid storybook compodoc) cy (jest or karma?)
+-create shell
+-impalement graphQL server with nest?? N/A use spaceX open api
+-use mutators? N/A Query suffice
+-write tools down and arrange them
+-add tools to project
+-think of structure
+-implement initial structure
+-implement init e2e && watch it fail
+-implement graphql and rest of structure
 add story book to needed components and implement unit tests => fail => enhance => pass
 write integration test ?
 add generated services to components
