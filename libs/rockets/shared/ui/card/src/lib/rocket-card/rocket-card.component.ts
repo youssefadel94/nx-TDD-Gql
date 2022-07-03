@@ -21,4 +21,5 @@ export class RocketCardComponent {//} implements OnInit {
       this.viewDetails.emit(this.rocketList.id as string);
   }
   //TODO fix material design
+  //TODO generate documentation
 }

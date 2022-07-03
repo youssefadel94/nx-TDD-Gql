@@ -1,3 +1,12 @@
+# run project 
+
+nx run spacex:serve:development
+
+# run e2e tests
+
+nx run spacex-e2e:e2e --watch
+-[watch flag for bot chrome simulation]
+
 
 
 # projects dependency graph
