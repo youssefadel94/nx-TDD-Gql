@@ -20,4 +20,5 @@ export class RocketCardComponent {//} implements OnInit {
     if (this.rocketList?.id)
       this.viewDetails.emit(this.rocketList.id as string);
   }
+  //TODO fix material design
 }

@@ -3,4 +3,5 @@ describe('rockets-shared-ui-card', () => {
   it('should render the component', () => {
     cy.get('yadel-rocket-card').should('exist');
   });
+  // TODO e2e testing
 });

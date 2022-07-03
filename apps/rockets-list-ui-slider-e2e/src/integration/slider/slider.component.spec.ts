@@ -3,4 +3,5 @@ describe('rockets-list-ui-slider', () => {
   it('should render the component', () => {
     cy.get('yadel-slider').should('exist');
   });
+  // TODO e2e testing
 });
