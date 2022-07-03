@@ -8,9 +8,9 @@ describe('SliderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SliderComponent ]
+      declarations: [SliderComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SliderComponent);
     component = fixture.componentInstance;
@@ -38,5 +38,16 @@ describe('SliderComponent', () => {
     // expect(component.valueChanged.emit).toHaveBeenCalledWith(5);
 
 
- })
+  })
+
+  it('should fire event when input value changes', () => {
+    //wait for html to renderer
+    // fixture.detectChanges();
+    // //use fixture
+    // const slider = fixture.debugElement.nativeElement.querySelector('input[type="range"]');
+    // slider.value = 5;
+    // slider.dispatchEvent(new Event('input'));
+    // expect(component.valueChanged.emit).toHaveBeenCalledWith(5);
+//use document
+   })
 });

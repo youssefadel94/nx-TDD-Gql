@@ -1,18 +1,30 @@
-<ng-container *ngTemplateOutlet="rocketList.id ? rocketListTemplate : rocketDetailTemplate"></ng-container>
+<ng-container *ngTemplateOutlet="rocketList.id ? rocketListTemplate : rocketDetail && rocketDetailTemplate"></ng-container>
 <ng-template #rocketListTemplate>
   <mat-card>
     <mat-card-title>{{rocketList.name}}</mat-card-title>
     <mat-card-content>{{rocketList.description}}</mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="openRocketDetail()">
+      <button mat-raised-button color="primary" id="viewDetails" (click)="openRocketDetail()">
         <span>View</span>
       </button>
     </mat-card-actions>
   </mat-card>
 </ng-template>
 <ng-template #rocketDetailTemplate>
-<mat-card>
-  <mat-card-title></mat-card-title>
-  <mat-card-subtitle></mat-card-subtitle>
-</mat-card>
+  <mat-card>
+    <mat-card-title>{{rocketDetail?.name}}</mat-card-title>
+    <mat-card-subtitle>{{rocketDetail?.country}} * {{rocketDetail?.company}}</mat-card-subtitle>
+    <mat-card-content>{{rocketDetail?.description}}
+      <br>
+      <details>
+        <summary>height</summary>
+        <p>{{rocketDetail?.height?.meters}}</p>
+      </details>
+      <details>
+        <summary>weight</summary>
+        <p>{{rocketDetail?.mass?.kg}}</p>
+      </details>
+    </mat-card-content>
+    <mat-card-footer><a href="{{rocketDetail?.wikipedia}}" target="_blank">{{rocketDetail?.wikipedia}}</a></mat-card-footer>
+  </mat-card>
 </ng-template>

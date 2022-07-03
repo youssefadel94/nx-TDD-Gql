@@ -15,4 +15,4 @@ const routes: Routes = [
   exports: [RocketsListComponent],
   // bootstrap: [RocketsListComponent]
 })
-export class RocketsListFeatureModule {}
+export class RocketsListFeatureModule { }

@@ -18,7 +18,9 @@ const initialState = {
   rocketDetail: {}
 }
 
-@Injectable()
+@Injectable(
+  { providedIn: 'root' }
+)
 export class RocketsStore extends ComponentStore<RocketsState>{
   rocketList$: Observable<RocketListCard[]> =
     this.select(state => state.rocketList);

@@ -8,9 +8,9 @@ describe('RocketCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RocketCardComponent ]
+      declarations: [RocketCardComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(RocketCardComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,16 @@ describe('RocketCardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('if RocketListCard it should emit a string  using viewDetails output when view button is clicked', () => {
+    const spy = jest.spyOn(component.viewDetails, 'emit');
+    component.rocketList = {
+      id: 'falcon9',
+    };
+    component.viewDetails.emit('test');
+    expect(spy).toHaveBeenCalledWith('test');
+    component.openRocketDetail();
+    expect(spy).toHaveBeenCalledWith('falcon9');
+
+  })
+
 });

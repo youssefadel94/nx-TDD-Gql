@@ -12,4 +12,4 @@ import { ReactiveFormsModule } from '@angular/forms';
     SliderComponent
   ],
 })
-export class SliderModule {}
+export class SliderModule { }

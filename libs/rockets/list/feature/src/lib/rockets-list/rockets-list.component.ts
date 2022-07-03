@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Rocket, RocketsListGQL } from '@yadel/rockets/list/data-access';
-import { map, tap } from 'rxjs/operators';
+import { Rocket } from '@yadel/rockets/list/data-access';
 import { RocketsStore } from '@yadel/rockets/shared/data-access/state';
 import { Router } from '@angular/router';
 @Component({

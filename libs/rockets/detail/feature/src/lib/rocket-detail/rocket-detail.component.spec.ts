@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { RocketDetailComponent } from './rocket-detail.component';
+import { Router } from '@angular/router';
+import { RocketsStore } from '@yadel/rockets/shared/data-access/state';
 
 describe('RocketDetailComponent', () => {
   let component: RocketDetailComponent;
@@ -11,9 +13,16 @@ describe('RocketDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RocketDetailComponent ]
+      declarations: [RocketDetailComponent],
+      providers: [{ provide: RocketsStore, useValue: {} }, {
+        provide: Router, useValue: {
+
+          navigate: ([route]: string) => {
+            // set class route to navigate router
+            return route;
+       } } },]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -24,5 +33,12 @@ describe('RocketDetailComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  //test go back function should call router.navigate
+  it('should call router.navigate', () => {
+    const router = TestBed.inject(Router);
+    jest.spyOn(router, 'navigate');
+    component.goBack();
+    expect(router.navigate).toHaveBeenCalledWith(['/home']);
   });
 });

@@ -29,4 +29,20 @@ rocketListCard.args = {
 
 export const rocketDetailCard = Template.bind({});
 rocketDetailCard.args = {
+  rocketDetail: {
+    "name": "Falcon 1",
+    "wikipedia": "https://en.wikipedia.org/wiki/Falcon_1",
+    "mass": {
+      "kg": 30146
+    },
+    "height": {
+      "meters": 22.25
+    },
+    "description": "The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.",
+    "country": "Republic of the Marshall Islands",
+    "company": "SpaceX",
+    "active": false,
+    "boosters": 0,
+    __typename: "Rocket"
+  }
 }

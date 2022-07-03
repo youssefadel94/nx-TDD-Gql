@@ -1,7 +1,9 @@
 <form [formGroup]="newSliderForm">
-<div class="slidecontainer">
-  <label for="slider">Number Of Rockets To Display:</label>
-  <br>
-  <input formControlName="slider" name="slider" step="1" type="range" min="0" max="10" value="0" class="slider" id="myRange">
-</div>
+  <div class="slidecontainer">
+    <label for="slider">Number Of Rockets To Display: <span><b>{{newSliderForm
+          .get('slider')?.value}}</b></span></label>
+    <br>
+    <input formControlName="slider" name="slider" step="1" type="range" min="0" max="10" value="0" class="slider"
+      id="range">
+  </div>
 </form>

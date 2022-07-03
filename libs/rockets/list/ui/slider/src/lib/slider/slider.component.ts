@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   selector: 'yadel-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
-  encapsulation:ViewEncapsulation.ShadowDom
+  // encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SliderComponent implements OnInit {
   @Output() valueChanged = new EventEmitter<number>();
@@ -20,9 +20,9 @@ export class SliderComponent implements OnInit {
     this.newSliderForm
       .get('slider')?.valueChanges
       .subscribe(
-      value => {
-      this.onValueChanged(value);
-    })
+        value => {
+          this.onValueChanged(value);
+        })
   }
 
   onValueChanged(value: number): void {
