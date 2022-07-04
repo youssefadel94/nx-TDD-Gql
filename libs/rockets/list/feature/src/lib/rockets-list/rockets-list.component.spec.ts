@@ -37,6 +37,7 @@ describe('RocketsListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
   it('sliderValueChanged should call fetchRockets which in turn should call RocketsStore.fetchRockets', () => {
     const spy = jest.spyOn(component, 'fetchRockets');
     const spy2 = jest.spyOn(component['state'], 'fetchRockets')
@@ -53,6 +54,6 @@ describe('RocketsListComponent', () => {
     expect(spy).toHaveBeenCalled();
     expect(spy2).toHaveBeenCalledWith(['/rocket']);
     expect(spy3).toHaveBeenCalledWith('1');
-
   })
+
 });

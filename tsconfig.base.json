@@ -10,7 +10,11 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom", "esnext.asynciterable"],
+    "lib": [
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
@@ -25,7 +29,9 @@
       "@yadel/rockets/list/data-access": [
         "libs/rockets/list/data-access/src/index.ts"
       ],
-      "@yadel/rockets/list/feature": ["libs/rockets/list/feature/src/index.ts"],
+      "@yadel/rockets/list/feature": [
+        "libs/rockets/list/feature/src/index.ts"
+      ],
       "@yadel/rockets/list/ui/slider": [
         "libs/rockets/list/ui/slider/src/index.ts"
       ],
@@ -40,5 +46,8 @@
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

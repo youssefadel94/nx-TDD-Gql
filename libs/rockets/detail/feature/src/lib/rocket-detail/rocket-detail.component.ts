@@ -9,15 +9,20 @@ import { Observable } from 'rxjs';
   templateUrl: './rocket-detail.component.html',
   styleUrls: ['./rocket-detail.component.css']
 })
-export class RocketDetailComponent {// implements OnInit {
+export class RocketDetailComponent {
   rocket$: Observable<Rocket>
+
   constructor(private state: RocketsStore, private router: Router) {
     this.rocket$ = this.state.rocketDetail$;
   }
+
+  /**
+   * @description navigate back to home page
+   * @memberof RocketDetailComponent
+   */
   goBack() {
     this.router.navigate(['/home']);
   }
-  // ngOnInit() {
-  // }
-  //TODO test back button
+
+  // TODO: test back button
 }

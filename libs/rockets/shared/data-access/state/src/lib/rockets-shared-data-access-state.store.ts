@@ -5,6 +5,11 @@ import { Rocket as RocketDetailCard, RocketDetailGQL } from '@yadel/rockets/deta
 import { Rocket as RocketListCard, RocketsListGQL } from '@yadel/rockets/list/data-access';
 import { map, Observable, switchMap } from "rxjs";
 
+/**
+ * @description state interface
+ * @export
+ * @interface RocketsState
+ */
 export interface RocketsState {
   readonly rocketList: RocketListCard[];
   readonly rocketDetailId: string;
@@ -22,18 +27,61 @@ const initialState = {
   { providedIn: 'root' }
 )
 export class RocketsStore extends ComponentStore<RocketsState>{
+
+  /**
+   * @description rocket list observable using NGRX selector
+   * @type {Observable<RocketListCard[]>}
+   * @memberof RocketsStore
+   */
   rocketList$: Observable<RocketListCard[]> =
     this.select(state => state.rocketList);
+
+  /**
+   * @description an observable for selected rocket to view using NGRX selector
+   * @type {Observable<string>}
+   * @memberof RocketsStore
+   */
   rocketDetailId$: Observable<string> =
     this.select(state => state.rocketDetailId);
+
+  /**
+   * @description an observable for selected rocket to view using NGRX selector
+   * @type {Observable<RocketDetailCard>}
+   * @memberof RocketsStore
+   */
   rocketDetail$: Observable<RocketDetailCard> =
     this.select(state => state.rocketDetail);
+
+
+  /**
+   * @description private NGRX update function to update state with new rocket list
+   * @private
+   * @memberof RocketsStore
+   */
   private updateRocketList = this.updater<RocketListCard[]>(
     (state, rocketList) => ({ ...state, rocketList }));
+
+  /**
+   * @description private NGRX update function to update state with new rocket detail
+   * @private
+   * @memberof RocketsStore
+   */
   private updateRocketDetailId = this.updater<string>(
     (state, rocketDetailId) => ({ ...state, rocketDetailId }));
+
+  /**
+   * @description private NGRX update function to update state with new rocket detail
+   * @private
+   * @memberof RocketsStore
+   */
   private updateRocketDetail = this.updater<RocketDetailCard>(
     (state, rocketDetail) => ({ ...state, rocketDetail }));
+
+  /**
+   * @description load rocket list from API
+   * @private
+   * @memberof RocketsStore
+   */
   private loadRocketList = this.effect<number>(
     limit$ => limit$.pipe(
       switchMap(
@@ -45,6 +93,12 @@ export class RocketsStore extends ComponentStore<RocketsState>{
       )
     )
   );
+
+  /**
+   * @description load rocket detail from API
+   * @private
+   * @memberof RocketsStore
+   */
   private loadRocketDetail = this.effect<string>(
     id$ => id$.pipe(
       switchMap(
@@ -56,15 +110,28 @@ export class RocketsStore extends ComponentStore<RocketsState>{
       )
     )
   );
+
   constructor(private rocketsListGQL: RocketsListGQL, private RocketDetailGQL: RocketDetailGQL) {
     super(initialState);
     this.loadRocketList(0);
-    // this.setState(initialState);
   }
+
+  /**
+   * @description fetch rockets from api and load in state
+   * @param {number} limit
+   * @memberof RocketsStore
+   */
   fetchRockets(limit: number) {
     this.loadRocketList(limit);
   }
+
+  /**
+   * @description fetch rocket detail from api and load in state
+   * @param {string} id
+   * @memberof RocketsStore
+   */
   fetchRocketDetail(id: string) {
     this.loadRocketDetail(id);
   }
+
 }

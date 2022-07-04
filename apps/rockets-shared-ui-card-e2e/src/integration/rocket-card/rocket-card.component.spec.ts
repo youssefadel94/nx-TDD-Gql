@@ -1,7 +1,9 @@
 describe('rockets-shared-ui-card', () => {
+
   beforeEach(() => cy.visit('/iframe.html?id=rocketcardcomponent--primary'));
+
   it('should render the component', () => {
     cy.get('yadel-rocket-card').should('exist');
   });
-  // TODO e2e testing
+  // TODO: e2e testing
 });

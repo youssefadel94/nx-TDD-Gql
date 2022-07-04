@@ -9,14 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./rockets-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RocketsListComponent {//implements OnInit {
+export class RocketsListComponent {
   rockets$: Observable<Rocket[]>;
 
   constructor(private state: RocketsStore, private router: Router) {
     this.rockets$ = this.state.rocketList$;
   }
-
-  // ngOnInit(): void { }
 
   /**
    * @description handle slider value changes
@@ -24,20 +22,20 @@ export class RocketsListComponent {//implements OnInit {
    * @memberof RocketsListComponent
    */
   sliderValueChanged(value: number) {
-    // console.log('sliderValueChanged', value);
     this.fetchRockets(value);
   }
 
   /**
-   * @description consumes the rocketsListGQL query and fetches the rockets
+   * @description calls state to fetch rocket consumes the rocketsListGQL query and fetches the rockets
    * @param {number} limit
    * @memberof RocketsListComponent
    */
   fetchRockets(limit: number): void {
     this.state.fetchRockets(limit);
   }
+
   /**
-   * @description
+   * @description calls state to fetch rocket detail then navigates to single rocket detail page
    * @param {string} id
    * @memberof RocketsListComponent
    */

@@ -20,34 +20,11 @@ describe('SliderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  // it('should render an input of type slider', () => {
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('input[type="range"]')).toBeTruthy();
-  // })
-  it('valueChanged EventEmitter should emit value of FormGroup newSliderForm control slider on slider valueChange', () => {
-    //use spy
-    const spy = jest.spyOn(component.valueChanged, 'emit');
 
-    //use formGroup
+  it('valueChanged EventEmitter should emit value of FormGroup newSliderForm control slider on slider valueChange', () => {
+    const spy = jest.spyOn(component.valueChanged, 'emit');
     component.newSliderForm.get('slider')?.setValue(5);
     expect(spy).toHaveBeenCalledWith(5);
-
-
-    // const slider = component.newSliderForm.get('slider');
-    // slider?.setValue(5);
-    // expect(component.valueChanged.emit).toHaveBeenCalledWith(5);
-
-
   })
 
-  it('should fire event when input value changes', () => {
-    //wait for html to renderer
-    // fixture.detectChanges();
-    // //use fixture
-    // const slider = fixture.debugElement.nativeElement.querySelector('input[type="range"]');
-    // slider.value = 5;
-    // slider.dispatchEvent(new Event('input'));
-    // expect(component.valueChanged.emit).toHaveBeenCalledWith(5);
-//use document
-   })
 });

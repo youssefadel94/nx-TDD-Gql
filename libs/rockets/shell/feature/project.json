@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/rockets/shell/feature"],
+      "outputs": [
+        "coverage/libs/rockets/shell/feature"
+      ],
       "options": {
         "jestConfig": "libs/rockets/shell/feature/jest.config.ts",
         "passWithNoTests": true

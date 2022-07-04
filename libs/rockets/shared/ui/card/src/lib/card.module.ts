@@ -4,7 +4,10 @@ import { RocketCardComponent } from './rocket-card/rocket-card.component';
 import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  imports: [CommonModule, MatCardModule],
+  imports: [
+    CommonModule,
+    MatCardModule
+  ],
   declarations: [
     RocketCardComponent
   ],
@@ -12,4 +15,4 @@ import { MatCardModule } from '@angular/material/card';
     RocketCardComponent
   ],
 })
-export class CardModule {}
+export class CardModule { }

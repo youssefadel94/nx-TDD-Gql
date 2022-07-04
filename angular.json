@@ -10,7 +10,9 @@
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/rockets/detail/data-access"],
+          "outputs": [
+            "coverage/libs/rockets/detail/data-access"
+          ],
           "options": {
             "jestConfig": "libs/rockets/detail/data-access/jest.config.ts",
             "passWithNoTests": true
@@ -46,7 +48,9 @@
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/rockets/detail/feature"],
+          "outputs": [
+            "coverage/libs/rockets/detail/feature"
+          ],
           "options": {
             "jestConfig": "libs/rockets/detail/feature/jest.config.ts",
             "passWithNoTests": true
@@ -72,7 +76,9 @@
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/rockets/list/data-access"],
+          "outputs": [
+            "coverage/libs/rockets/list/data-access"
+          ],
           "options": {
             "jestConfig": "libs/rockets/list/data-access/jest.config.ts",
             "passWithNoTests": true
@@ -109,7 +115,9 @@
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/rockets/list/ui/slider"],
+          "outputs": [
+            "coverage/libs/rockets/list/ui/slider"
+          ],
           "options": {
             "jestConfig": "libs/rockets/list/ui/slider/jest.config.ts",
             "passWithNoTests": true
@@ -140,7 +148,9 @@
         },
         "build-storybook": {
           "executor": "@storybook/angular:build-storybook",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputDir": "dist/storybook/rockets-list-ui-slider",
             "configDir": "libs/rockets/list/ui/slider/.storybook",
@@ -175,14 +185,20 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/rockets-list-ui-slider-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/rockets-list-ui-slider-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["rockets-list-ui-slider"]
+      "implicitDependencies": [
+        "rockets-list-ui-slider"
+      ]
     },
     "rockets-shared-data-access-state": {
       "projectType": "library",
@@ -192,7 +208,9 @@
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/rockets/shared/data-access/state"],
+          "outputs": [
+            "coverage/libs/rockets/shared/data-access/state"
+          ],
           "options": {
             "jestConfig": "libs/rockets/shared/data-access/state/jest.config.ts",
             "passWithNoTests": true
@@ -218,7 +236,9 @@
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/rockets/shared/ui/card"],
+          "outputs": [
+            "coverage/libs/rockets/shared/ui/card"
+          ],
           "options": {
             "jestConfig": "libs/rockets/shared/ui/card/jest.config.ts",
             "passWithNoTests": true
@@ -249,7 +269,9 @@
         },
         "build-storybook": {
           "executor": "@storybook/angular:build-storybook",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputDir": "dist/storybook/rockets-shared-ui-card",
             "configDir": "libs/rockets/shared/ui/card/.storybook",
@@ -284,14 +306,20 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/rockets-shared-ui-card-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/rockets-shared-ui-card-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["rockets-shared-ui-card"]
+      "implicitDependencies": [
+        "rockets-shared-ui-card"
+      ]
     },
     "rockets-shell-feature": "libs/rockets/shell/feature",
     "spacex": "apps/spacex",

@@ -1,30 +1,36 @@
-# run project 
+# run project
 
 nx run spacex:serve:development
 
 # run e2e tests
 
-nx run spacex-e2e:e2e --watch
--[watch flag for bot chrome simulation]
-
-
+nx run spacex-e2e:e2e --watch -[watch flag for bot chrome simulation]
 
 # projects dependency graph
+
 nx dep-graph
+
 # compodoc
+
 nx g @twittwer/compodoc:config <project>
+
 # adds a `compodoc` target to the specified project
+
 # ensures `@compodoc/compodoc` as devDependencies
+
 Run nx run <project>:compodoc --serve and go to http://localhost:8080/
 
-# storybook * for RocketCard
-nx run rockets-shared-ui-card:storybook 
+# storybook \* for RocketCard
+
+nx run rockets-shared-ui-card:storybook
 
 # add story book
+
 nx g @nrwl/angular:storybook-configuration project-name
 nx run project-name:storybook
 
 # component generate
+
 ng generate @schematics/angular:component --name= --project= --export
 
 # Yadel
@@ -117,11 +123,6 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
 
 ## ☁ Nx Cloud
 

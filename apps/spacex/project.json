@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/spacex",
         "index": "apps/spacex/src/index.html",
@@ -13,7 +15,10 @@
         "polyfills": "apps/spacex/src/polyfills.ts",
         "tsConfig": "apps/spacex/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/spacex/src/favicon.ico", "apps/spacex/src/assets"],
+        "assets": [
+          "apps/spacex/src/favicon.ico",
+          "apps/spacex/src/assets"
+        ],
         "styles": [
           "apps/spacex/src/styles.scss",
           "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
@@ -74,12 +79,17 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/spacex/**/*.ts", "apps/spacex/**/*.html"]
+        "lintFilePatterns": [
+          "apps/spacex/**/*.ts",
+          "apps/spacex/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/spacex"],
+      "outputs": [
+        "coverage/apps/spacex"
+      ],
       "options": {
         "jestConfig": "apps/spacex/jest.config.ts",
         "passWithNoTests": true
@@ -101,7 +111,9 @@
     },
     "build-storybook": {
       "executor": "@storybook/angular:build-storybook",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputDir": "dist/storybook/spacex",
         "configDir": "apps/spacex/.storybook",

@@ -1,1 +1,1 @@
-// TODO config angular material for story book
+// TODO: config angular material for story book

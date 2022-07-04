@@ -10,9 +10,18 @@ const routes: Routes = [
   { path: '', component: RocketsListComponent },
 ];
 @NgModule({
-  imports: [CommonModule, SliderModule, RouterModule.forChild(routes), MatGridListModule, CardModule],
-  declarations: [RocketsListComponent],
-  exports: [RocketsListComponent],
-  // bootstrap: [RocketsListComponent]
+  imports: [
+    CommonModule,
+    SliderModule,
+    RouterModule.forChild(routes),
+    MatGridListModule,
+    CardModule
+  ],
+  declarations: [
+    RocketsListComponent
+  ],
+  exports: [
+    RocketsListComponent
+  ],
 })
 export class RocketsListFeatureModule { }

@@ -1337,13 +1337,13 @@ export const RocketsListDocument = gql`
 }
     `;
 
-  @Injectable({
-    providedIn: 'root'
-  })
-  export class RocketsListGQL extends Apollo.Query<RocketsListQuery, RocketsListQueryVariables> {
-    override document = RocketsListDocument;
+@Injectable({
+  providedIn: 'root'
+})
+export class RocketsListGQL extends Apollo.Query<RocketsListQuery, RocketsListQueryVariables> {
+  override document = RocketsListDocument;
 
-    constructor(apollo: Apollo.Apollo) {
-      super(apollo);
-    }
+  constructor(apollo: Apollo.Apollo) {
+    super(apollo);
   }
+}

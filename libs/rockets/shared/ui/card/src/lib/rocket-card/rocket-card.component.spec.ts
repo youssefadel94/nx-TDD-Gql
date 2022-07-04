@@ -20,6 +20,7 @@ describe('RocketCardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
   it('if RocketListCard it should emit a string  using viewDetails output when view button is clicked', () => {
     const spy = jest.spyOn(component.viewDetails, 'emit');
     component.rocketList = {

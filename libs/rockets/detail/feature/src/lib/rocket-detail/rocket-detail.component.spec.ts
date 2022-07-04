@@ -18,9 +18,10 @@ describe('RocketDetailComponent', () => {
         provide: Router, useValue: {
 
           navigate: ([route]: string) => {
-            // set class route to navigate router
             return route;
-       } } },]
+          }
+        }
+      },]
     })
       .compileComponents();
   }));
@@ -34,11 +35,12 @@ describe('RocketDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  //test go back function should call router.navigate
+
   it('should call router.navigate', () => {
     const router = TestBed.inject(Router);
     jest.spyOn(router, 'navigate');
     component.goBack();
     expect(router.navigate).toHaveBeenCalledWith(['/home']);
   });
+
 });

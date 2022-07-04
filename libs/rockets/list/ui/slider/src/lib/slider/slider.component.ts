@@ -1,15 +1,15 @@
-import { Component, EventEmitter, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'yadel-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
-  // encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SliderComponent implements OnInit {
   @Output() valueChanged = new EventEmitter<number>();
 
   newSliderForm: FormGroup;
+
   constructor() {
     this.newSliderForm = new FormBuilder().group({
       slider: [0, [Validators.required, Validators.min(0), Validators.max(10)]]
@@ -17,6 +17,7 @@ export class SliderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // create new form group linked to slider
     this.newSliderForm
       .get('slider')?.valueChanges
       .subscribe(
@@ -25,6 +26,11 @@ export class SliderComponent implements OnInit {
         })
   }
 
+  /**
+   * @description emits new slider value on change
+   * @param {number} value
+   * @memberof SliderComponent
+   */
   onValueChanged(value: number): void {
     this.valueChanged.emit(value);
   }

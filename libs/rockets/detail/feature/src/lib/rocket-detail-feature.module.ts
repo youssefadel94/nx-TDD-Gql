@@ -8,8 +8,16 @@ const routes: Routes = [
   { path: '', component: RocketDetailComponent },
 ];
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), CardModule],
-  declarations: [RocketDetailComponent],
-  exports: [RocketDetailComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    CardModule
+  ],
+  declarations: [
+    RocketDetailComponent
+  ],
+  exports: [
+    RocketDetailComponent
+  ],
 })
 export class RocketDetailFeatureModule { }

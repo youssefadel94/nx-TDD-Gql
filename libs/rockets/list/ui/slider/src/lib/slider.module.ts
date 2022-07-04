@@ -4,7 +4,10 @@ import { SliderComponent } from './slider/slider.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule
+  ],
   declarations: [
     SliderComponent
   ],
